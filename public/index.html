@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ანონიმური ხმოვანი ჩათი</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ანონიმური ხმოვანი ჩათი</h1>
+      <div class="settings">
+        <div class="setting-group">
+          <label>ჩემი სქესი:</label>
+          <select id="myGender">
+            <option value="male">მამრობითი</option>
+            <option value="female">მდედრობითი</option>
+          </select>
+        </div>
+        <div class="setting-group">
+          <label>საუბრის თანამონაწილის სქესი:</label>
+          <select id="partnerGender">
+            <option value="male">მამრობითი</option>
+            <option value="female">მდედრობითი</option>
+            <option value="any">ნებისმიერი</option>
+          </select>
+        </div>
+        <div class="setting-group">
+          <label>ჩემი ასაკი:</label>
+          <div class="age-options">
+            <label
+              ><input type="radio" name="myAge" value="under17" checked />
+              17-მდე</label
+            >
+            <label
+              ><input type="radio" name="myAge" value="18-24" /> 18-დან
+              24-მდე</label
+            >
+            <label
+              ><input type="radio" name="myAge" value="25-33" /> 25-დან
+              33-მდე</label
+            >
+            <label
+              ><input type="radio" name="myAge" value="33plus" /> 33-ზე
+              მეტი</label
+            >
+          </div>
+        </div>
+        <div class="setting-group">
+          <label>საუბრის თანამონაწილის ასაკი:</label>
+          <div class="age-options">
+            <label
+              ><input type="checkbox" name="partnerAge" value="under17" />
+              17-მდე</label
+            >
+            <label
+              ><input type="checkbox" name="partnerAge" value="18-24" /> 18-დან
+              24-მდე</label
+            >
+            <label
+              ><input type="checkbox" name="partnerAge" value="25-33" /> 25-დან
+              33-მდე</label
+            >
+            <label
+              ><input type="checkbox" name="partnerAge" value="33plus" /> 33-ზე
+              მეტი</label
+            >
+          </div>
+        </div>
+      </div>
+      <button id="start">დაკავშირება</button>
+      <button id="stop" style="display: none">გათიშვა</button>
+      <p id="status">დააჭირეთ "დაკავშირება", რომ დაიწყოთ საუბარი</p>
+      <audio id="remoteAudio" autoplay></audio>
+    </div>
+    <div id="dialogWindow" class="dialog-window hidden">
+      <div class="dialog-content">
+        <h2 id="dialogTitle">ვიზავის ძიება...</h2>
+        <p id="dialogTimer">00:00</p>
+        <div class="volume-control">
+          <label for="volumeSlider">ვიზავის ხმა:</label>
+          <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="100"
+            step="1"
+            value="100"
+          />
+        </div>
+        <button id="endDialog">დასრულება</button>
+      </div>
+    </div>
+  </body>
+</html>
